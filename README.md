@@ -1,28 +1,41 @@
-# `<router-view>`
+# vue-router
 
-`<router-view>` 组件是一个 functional 组件，渲染路径匹配到的视图组件。`<router-view>` 渲染的组件还可以内嵌自己的 `<router-view>`，根据嵌套路径，渲染嵌套组件。
+> 注意：对于 TypeScript 用户来说，vue-router@3.0+ 依赖 vue@2.5+，反之亦然。
 
-### 属性
+**[版本说明](https://github.com/vuejs/vue-router/releases)**
 
-- **name**
-
-  - 类型: `string`
-
-  - 默认值: `"default"`
-
-如果 `<router-view>`设置了名称，则会渲染对应的路由配置中 `components` 下的相应组件。查看 [命名视图](../essentials/named-views.md) 中的例子。
-
-### 行为表现
-
-其他属性（非 router-view 使用的属性）都直接传给渲染的组件，
-很多时候，每个路由的数据都是包含在路由参数中。
-
-因为它也是个组件，所以可以配合 `<transition>` 和 `<keep-alive>` 使用。如果两个结合一起用，要确保在内层使用 `<keep-alive>`：
-
-``` html
-<transition>
-  <keep-alive>
-    <router-view></router-view>
-  </keep-alive>
-</transition>
-```
+- [安装](installation.md)
+- 基础
+  - [开始](essentials/getting-started.md)
+  - [动态路由匹配](essentials/dynamic-matching.md)
+  - [嵌套路由](essentials/nested-routes.md)
+  - [编程式导航](essentials/navigation.md)
+  - [命名路由](essentials/named-routes.md)
+  - [命名视图](essentials/named-views.md)
+  - [重定向和别名](essentials/redirect-and-alias.md)
+  - [向路由组件传递 props](essentials/passing-props.md)
+  - [HTML5 History 模式](essentials/history-mode.md)
+- 进阶
+  - [导航守卫](advanced/navigation-guards.md)
+  - [路由元信息](advanced/meta.md)
+  - [过渡动效](advanced/transitions.md)
+  - [数据获取](advanced/data-fetching.md)
+  - [滚动行为](advanced/scroll-behavior.md)
+  - [懒加载](advanced/lazy-loading.md)
+- API 文档
+  - [Router 构造配置](api/options.md)
+    - [routes](api/options.md#routes)
+    - [mode](api/options.md#mode)
+    - [base](api/options.md#base)
+    - [linkActiveClass](api/options.md#linkactiveclass)
+    - [linkExactActiveClass](api/options.md#linkexactactiveclass)
+    - [scrollBehavior](api/options.md#scrollbehavior)
+    - [parseQuery / stringifyQuery](api/options.md#parsequery--stringifyquery)
+    - [fallback](api/options.md#fallback)
+  - [Router 实例](api/router-instance.md)
+    - [Properties](api/router-instance.md#properties)
+    - [Methods](api/router-instance.md#methods)
+  - [路由信息对象](api/route-object.md)
+  - [对组件注入](api/component-injections.md)
+  - [router-link](api/router-link.md)
+  - [router-view](api/router-view.md)
